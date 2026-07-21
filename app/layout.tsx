@@ -14,12 +14,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Draft House - Boutique Stay in Bir, Himachal Pradesh | Coming Soon",
-  description: "Draft House, Bir is a boutique stay nestled near the Bir paragliding landing site, designed for travelers who appreciate thoughtful spaces, warm hospitality, and meaningful experiences. Blending modern comfort with mountain charm, our private rooms and cozy dorms offer the perfect base to explore Bir. Whether you're here to fly, work remotely, or simply slow down, Draft House invites you to connect, unwind, and create stories worth sharing.",
-  keywords: "Draft House, Draft House Bir, boutique hotel Bir, Himachal Pradesh hotels, mountain resort, luxury stay Bir, paragliding Bir, boutique accommodation, Himalayan retreat, Bir valley, Bir Billing, paragliding India, remote work stay, digital nomad Bir, mountain homestay, adventure sports Bir, trekking Bir, cozy dorms Bir, private rooms Bir, weekend getaway Himachal",
-  authors: [{ name: "Draft House Bir" }],
-  creator: "Draft House Bir",
-  publisher: "Draft House Bir",
+  title: "Draft Bir - Boutique Stay | Stay. Slow Down. Feel Bir.",
+  description: "A boutique stay just minutes from Bir's paragliding landing site, where contemporary comfort meets mountain calm. Wake up to the Dhauladhar views, unwind in thoughtfully designed rooms, and experience Bir at your own pace. Offering deluxe rooms, cozy dorms, fresh café food, and curated experiences for travelers seeking meaningful mountain escapes.",
+  keywords: "Draft Bir, boutique hotel Bir, Himachal Pradesh accommodation, paragliding Bir, mountain stay Bir, Bir Billing hotels, workation Bir, café Bir, Dhauladhar views, budget dorms Bir, deluxe rooms Bir, nature walks Bir, sunset views Bir, local culture Himachal, weekend getaway Bir, adventure sports Bir, remote work friendly hotel, mountain retreat India, Bir valley stay, thoughtful hospitality",
+  authors: [{ name: "Draft Bir" }],
+  creator: "Draft Bir",
+  publisher: "Draft Bir",
   formatDetection: {
     email: false,
     address: false,
@@ -38,16 +38,16 @@ export const metadata: Metadata = {
     'og:locale': 'en_IN',
   },
   openGraph: {
-    title: "Draft House - Boutique Stay in Bir, Himachal Pradesh | Coming Soon",
-    description: "Draft House, Bir is a boutique stay nestled near the Bir paragliding landing site, designed for travelers who appreciate thoughtful spaces, warm hospitality, and meaningful experiences. Blending modern comfort with mountain charm, our private rooms and cozy dorms offer the perfect base to explore Bir.",
+    title: "Draft Bir - Boutique Stay | Stay. Slow Down. Feel Bir.",
+    description: "A boutique stay just minutes from Bir's paragliding landing site, where contemporary comfort meets mountain calm. Wake up to the Dhauladhar views, unwind in thoughtfully designed rooms, and experience Bir at your own pace.",
     url: "https://www.drafthospitality.com",
-    siteName: "Draft House Bir",
+    siteName: "Draft Bir",
     images: [
       {
         url: "https://www.drafthospitality.com/brand.jpg",
         width: 1200,
         height: 630,
-        alt: "Draft House - Boutique Stay in Bir, Himachal Pradesh",
+        alt: "Draft Bir - Boutique Stay in Himachal Pradesh",
       },
     ],
     locale: "en_US",
@@ -55,11 +55,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Draft House Bir - Boutique Stay Coming Soon",
-    description: "Draft House, Bir is a boutique stay near the paragliding landing site. Blending modern comfort with mountain charm for travelers seeking thoughtful spaces and meaningful experiences.",
+    title: "Draft Bir - Stay. Slow Down. Feel Bir.",
+    description: "A boutique stay minutes from Bir's paragliding site. Contemporary comfort meets mountain calm. Deluxe rooms, cozy dorms, café, and curated experiences.",
     images: ["https://www.drafthospitality.com/brand.jpg"],
-    creator: "@drafthousebir",
-    site: "@drafthousebir",
+    creator: "@thedraftbir",
+    site: "@thedraftbir",
   },
   robots: {
     index: true,
@@ -104,8 +104,8 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Hotel",
-              "name": "Draft House Bir",
-              "description": "A boutique stay nestled near the Bir paragliding landing site, designed for travelers who appreciate thoughtful spaces, warm hospitality, and meaningful experiences.",
+              "name": "Draft Bir",
+              "description": "A boutique stay just minutes from Bir's paragliding landing site. Contemporary comfort meets mountain calm with thoughtfully designed rooms, café, and curated experiences.",
               "url": "https://www.drafthospitality.com",
               "logo": "https://www.drafthospitality.com/brand.jpg",
               "image": "https://www.drafthospitality.com/brand.jpg",
@@ -135,17 +135,17 @@ export default function RootLayout({
                 },
                 {
                   "@type": "LocationFeatureSpecification",
-                  "name": "Remote Work Facilities",
+                  "name": "Workation-Friendly",
                   "value": true
                 },
                 {
                   "@type": "LocationFeatureSpecification",
-                  "name": "Boutique Rooms",
+                  "name": "Deluxe Rooms",
                   "value": true
                 },
                 {
                   "@type": "LocationFeatureSpecification",
-                  "name": "Dormitory",
+                  "name": "Cozy Dorms",
                   "value": true
                 }
               ],
