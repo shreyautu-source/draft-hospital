@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import Script from "next/script";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import { HOTEL_INFO } from "@/lib/data";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -14,56 +16,56 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Draft Hotel Bir Billing - Boutique Stay | Where Stories Begin.",
+  metadataBase: new URL(HOTEL_INFO.siteUrl),
+  title: {
+    default: "Draft Hotel Bir Billing - Boutique Stay, Café & Mountain Retreat",
+    template: "%s | Draft Hotel Bir Billing",
+  },
   description:
-    "A boutique stay just minutes from Bir's paragliding landing site, where contemporary comfort meets mountain calm. Wake up to the Dhauladhar views, unwind in thoughtfully designed rooms, and experience Bir at your own pace. Offering deluxe rooms, cozy dorms, fresh café food, and curated experiences for travelers seeking meaningful mountain escapes.",
-  keywords:
-    "Draft Hotel Bir Billing, boutique hotel Bir, Himachal Pradesh accommodation, paragliding Bir, mountain stay Bir, Bir Billing hotels, workation Bir, café Bir, Dhauladhar views, budget dorms Bir, deluxe rooms Bir, nature walks Bir, sunset views Bir, local culture Himachal, weekend getaway Bir, adventure sports Bir, remote work friendly hotel, mountain retreat India, Bir valley stay, thoughtful hospitality",
+    "Boutique hotel stay just 3 minutes from Bir's paragliding landing site. Offering deluxe rooms, family suites, high-speed fiber WiFi, fresh café dining, and stunning Dhauladhar views in Himachal Pradesh.",
+  keywords: [
+    "Draft Hotel Bir Billing",
+    "Boutique hotel Bir Himachal Pradesh",
+    "Bir paragliding hotel near landing site",
+    "Best hotels in Bir Billing",
+    "Workation stay Bir",
+    "Family suite Bir Billing",
+    "Draft Cafe Bir",
+    "Bir Billing accommodations",
+    "Dhauladhar mountain view stay",
+    "High speed WiFi stay Bir",
+    "Tandem paragliding booking Bir"
+  ],
   authors: [{ name: "Draft Hotel Bir Billing" }],
   creator: "Draft Hotel Bir Billing",
   publisher: "Draft Hotel Bir Billing",
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  metadataBase: new URL("https://www.drafthospitality.com"),
   alternates: {
     canonical: "/",
   },
-  other: {
-    "og:image": "https://www.drafthospitality.com/brand.jpg",
-    "og:image:secure_url": "https://www.drafthospitality.com/brand.jpg",
-    "og:image:type": "image/jpeg",
-    "og:image:width": "1200",
-    "og:image:height": "630",
-    "og:locale": "en_IN",
-  },
   openGraph: {
-    title: "Draft Hotel Bir Billing - Boutique Stay | Where Stories Begin.",
+    title: "Draft Hotel Bir Billing - Where Stories Begin",
     description:
-      "A boutique stay just minutes from Bir's paragliding landing site, where contemporary comfort meets mountain calm. Wake up to the Dhauladhar views, unwind in thoughtfully designed rooms, and experience Bir at your own pace.",
-    url: "https://www.drafthospitality.com",
+      "Boutique stay minutes from Bir paragliding landing ground. Contemporary mountain comfort, high-speed WiFi, artisan café, and Dhauladhar views.",
+    url: HOTEL_INFO.siteUrl,
     siteName: "Draft Hotel Bir Billing",
     images: [
       {
-        url: "https://www.drafthospitality.com/brand.jpg",
+        url: "/images/collection/Outdoor%20View%20/20260702_081827.jpg",
         width: 1200,
         height: 630,
-        alt: "Draft Hotel Bir Billing - Boutique Stay in Himachal Pradesh",
+        alt: "Draft Hotel Bir Billing Mountain Retreat",
       },
     ],
-    locale: "en_US",
+    locale: "en_IN",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Draft Hotel Bir Billing - Where Stories Begin.",
+    title: "Draft Hotel Bir Billing - Boutique Stay in Bir",
     description:
-      "A boutique stay minutes from Bir's paragliding site. Contemporary comfort meets mountain calm. Deluxe rooms, cozy dorms, café, and curated experiences.",
-    images: ["https://www.drafthospitality.com/brand.jpg"],
+      "Stay minutes from Bir's paragliding site. Boutique rooms, cafe, and high-speed fiber WiFi.",
+    images: ["/images/collection/Outdoor%20View%20/20260702_081827.jpg"],
     creator: "@thedraftbir",
-    site: "@thedraftbir",
   },
   robots: {
     index: true,
@@ -90,108 +92,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <head>
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/apple-touch-icon.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/favicon-16x16.png"
-        />
-        <link rel="manifest" href="/site.webmanifest" />
-        <link rel="canonical" href="https://www.drafthospitality.com" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
         <meta name="geo.region" content="IN-HP" />
         <meta name="geo.placename" content="Bir, Himachal Pradesh" />
-        <meta name="geo.position" content="32.0419;76.7243" />
-        <meta name="ICBM" content="32.0419, 76.7243" />
-        <Script
-          id="structured-data"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Hotel",
-              name: "Draft Hotel Bir Billing",
-              description:
-                "A boutique stay just minutes from Bir's paragliding landing site. Contemporary comfort meets mountain calm with thoughtfully designed rooms, café, and curated experiences.",
-              url: "https://www.drafthospitality.com",
-              logo: "https://www.drafthospitality.com/brand.jpg",
-              image: "https://www.drafthospitality.com/brand.jpg",
-              address: {
-                "@type": "PostalAddress",
-                streetAddress: "Near Paragliding Landing Site",
-                addressLocality: "Bir",
-                addressRegion: "Himachal Pradesh",
-                postalCode: "176077",
-                addressCountry: "IN",
-              },
-              geo: {
-                "@type": "GeoCoordinates",
-                latitude: 32.0419,
-                longitude: 76.7243,
-              },
-              amenityFeature: [
-                {
-                  "@type": "LocationFeatureSpecification",
-                  name: "Mountain Views",
-                  value: true,
-                },
-                {
-                  "@type": "LocationFeatureSpecification",
-                  name: "Paragliding",
-                  value: true,
-                },
-                {
-                  "@type": "LocationFeatureSpecification",
-                  name: "Workation-Friendly",
-                  value: true,
-                },
-                {
-                  "@type": "LocationFeatureSpecification",
-                  name: "Deluxe Rooms",
-                  value: true,
-                },
-                {
-                  "@type": "LocationFeatureSpecification",
-                  name: "Cozy Dorms",
-                  value: true,
-                },
-              ],
-              priceRange: "₹₹",
-              sameAs: [
-                "https://www.facebook.com/drafthouse.bir",
-                "https://www.instagram.com/thedraftbir",
-              ],
-              potentialAction: {
-                "@type": "ReserveAction",
-                target: {
-                  "@type": "EntryPoint",
-                  urlTemplate: "https://www.drafthospitality.com",
-                },
-                result: {
-                  "@type": "LodgingReservation",
-                  name: "Book Your Stay",
-                },
-              },
-            }),
-          }}
-        />
+        <meta name="geo.position" content={`${HOTEL_INFO.geo.lat};${HOTEL_INFO.geo.lng}`} />
+        <meta name="ICBM" content={`${HOTEL_INFO.geo.lat}, ${HOTEL_INFO.geo.lng}`} />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#061412] text-slate-100 selection:bg-amber-500 selection:text-slate-950 flex flex-col min-h-screen`}
       >
-        {children}
+        <Navbar />
+        <main className="flex-grow">{children}</main>
+        <Footer />
       </body>
     </html>
   );
