@@ -122,13 +122,13 @@ export default function Footer() {
               </p>
               <div className="pt-2">
                 <a
-                  href="https://maps.google.com/?q=Bir,Himachal+Pradesh"
+                  href={HOTEL_INFO.googleMapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center space-x-2 text-xs font-semibold px-4 py-2 rounded-lg bg-emerald-950/80 hover:bg-emerald-900 border border-emerald-800/60 text-slate-200 transition-colors"
+                  className="inline-flex items-center space-x-2 text-xs font-semibold px-4 py-2.5 rounded-xl bg-gradient-to-r from-emerald-900 to-emerald-950 hover:from-emerald-800 hover:to-emerald-900 border border-emerald-700/60 text-amber-300 transition-all transform hover:scale-105 shadow-md"
                 >
-                  <span>🗺️</span>
-                  <span>View on Google Maps</span>
+                  <span>📍</span>
+                  <span>Open Location on Google Maps</span>
                 </a>
               </div>
             </address>

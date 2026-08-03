@@ -55,7 +55,9 @@ export const HOTEL_INFO = {
   phone: "+91 78075 85316",
   whatsappPhone: "+917807585316",
   email: "draft.bir.2026@gmail.com",
-  address: "Near Paragliding Landing Site, Bir, Himachal Pradesh 176077",
+  address: "Draft Hotel Bir Billing At landing Site, Near Bir Paragliding Landing Side, Road, Colony, Suja, Bir, Himachal Pradesh 176077",
+  googleMapsUrl: "https://maps.app.goo.gl/wjpP1okWVGxmQ7Qe6",
+  googleMapsEmbedUrl: "https://maps.google.com/maps?q=Draft+Hotel+Bir+Billing+At+landing+Site,+Near+Bir+Pragliding+Landing+Side,+Road,+Colony,+Suja,+Bir,+Himachal+Pradesh+176077&t=&z=16&ie=UTF8&iwloc=&output=embed",
   geo: {
     lat: 32.0419,
     lng: 76.7243,

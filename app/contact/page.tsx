@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import MapSection from "@/components/MapSection";
 import { HOTEL_INFO } from "@/lib/data";
 
 export default function ContactPage() {
@@ -230,6 +231,9 @@ export default function ContactPage() {
             </div>
           </div>
         </div>
+
+        {/* Map Section */}
+        <MapSection className="mb-20" />
 
         {/* How to Reach Bir Section */}
         <div className="bg-gradient-to-b from-[#0a211e]/80 to-[#040d0c] rounded-3xl p-8 sm:p-12 border border-emerald-900/50 space-y-8 shadow-2xl">

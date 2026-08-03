@@ -4,6 +4,7 @@ import Script from "next/script";
 import RoomCard from "@/components/RoomCard";
 import ExperienceCard from "@/components/ExperienceCard";
 import FAQSection from "@/components/FAQSection";
+import MapSection from "@/components/MapSection";
 import Carousel from "@/components/Carousel";
 import { ROOMS_DATA, EXPERIENCES_DATA, GALLERY_COLLECTION, TESTIMONIALS, HOTEL_INFO } from "@/lib/data";
 
@@ -16,9 +17,10 @@ export default function Home() {
     url: HOTEL_INFO.siteUrl,
     telephone: HOTEL_INFO.phone,
     email: HOTEL_INFO.email,
+    hasMap: HOTEL_INFO.googleMapsUrl,
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Near Paragliding Landing Site",
+      streetAddress: "At landing Site, Near Bir Paragliding Landing Side, Road, Colony, Suja",
       addressLocality: "Bir",
       addressRegion: "Himachal Pradesh",
       postalCode: "176077",
@@ -313,6 +315,13 @@ export default function Home() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Map & Location Section */}
+      <section className="py-20 bg-[#061412] text-slate-100 border-t border-emerald-900/40">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <MapSection />
         </div>
       </section>
 
