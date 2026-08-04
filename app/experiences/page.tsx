@@ -5,11 +5,18 @@ import ExperienceCard from "@/components/ExperienceCard";
 import { EXPERIENCES_DATA, HOTEL_INFO } from "@/lib/data";
 
 export const metadata = {
-  title: "Bir Billing Experiences | Paragliding, Sunsets & Nature Trails",
+  title: "Bir Paragliding & Experiences | Draft Hotel Bir Billing",
   description:
-    "Discover tandem paragliding at Asia's #1 site in Bir Billing, monastery tours, Bangoru waterfall hikes, and mountain workations. Stay 3 minutes from the landing ground at Draft Hotel.",
+    "Discover tandem paragliding at Asia's #1 site in Bir Billing, Tibetan monastery tours, waterfall hikes, and mountain workations. Stay 3 minutes from the landing ground at Draft Hotel Bir.",
+  keywords: [
+    "Draft Hotel Bir paragliding",
+    "Tandem paragliding Bir Billing",
+    "Draft Hotel Bir activities",
+    "Bir paragliding landing ground hotel",
+    "Bir Billing guide"
+  ],
   alternates: {
-    canonical: "/experiences",
+    canonical: `${HOTEL_INFO.siteUrl}/experiences`,
   },
 };
 

@@ -4,11 +4,18 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import { HOTEL_INFO } from "@/lib/data";
 
 export const metadata = {
-  title: "Draft Café & Dining | Mountain Views & Artisan Coffee in Bir",
+  title: "Draft Café & Dining | Draft Hotel Bir Billing",
   description:
-    "Relax at Draft Café in Bir Billing. Serving artisan espresso, fresh breakfast bowls, Himachali teas, wood-fired pizzas, and mountain views near the landing ground.",
+    "Relax at Draft Café by Draft Hotel Bir. Serving artisan espresso, fresh breakfast bowls, Himachali teas, wood-fired pizzas, and Dhauladhar mountain views 3 minutes from Bir landing site.",
+  keywords: [
+    "Draft Cafe Bir",
+    "Draft Cafe Bir Billing",
+    "Draft Hotel Cafe",
+    "Best cafe in Bir Billing",
+    "Workation cafe Bir"
+  ],
   alternates: {
-    canonical: "/cafe",
+    canonical: `${HOTEL_INFO.siteUrl}/cafe`,
   },
 };
 

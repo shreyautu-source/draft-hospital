@@ -1,13 +1,20 @@
 import Breadcrumbs from "@/components/Breadcrumbs";
 import RoomCard from "@/components/RoomCard";
-import { ROOMS_DATA } from "@/lib/data";
+import { ROOMS_DATA, HOTEL_INFO } from "@/lib/data";
 
 export const metadata = {
-  title: "Accommodations & Rooms | Draft Hotel Bir Billing",
+  title: "Accommodations & Suite Rooms | Draft Hotel Bir",
   description:
-    "Explore our boutique rooms, deluxe suites, and family accommodations in Bir Billing. Featuring mountain balconies, high-speed fiber WiFi, 24/7 hot water, and close proximity to paragliding landing site.",
+    "Explore luxury suite rooms, deluxe double rooms, and family villa suites at Draft Hotel Bir Billing. High-speed fiber WiFi, 24/7 hot showers, mountain balconies, 3 mins from landing ground.",
+  keywords: [
+    "Draft Hotel Bir rooms",
+    "Draft Hotel room rates",
+    "Draft Hotel Bir family suite",
+    "Best boutique hotel rooms Bir Billing",
+    "Draft Hotel accommodation"
+  ],
   alternates: {
-    canonical: "/rooms",
+    canonical: `${HOTEL_INFO.siteUrl}/rooms`,
   },
 };
 

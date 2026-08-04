@@ -11,16 +11,18 @@ import { ROOMS_DATA, EXPERIENCES_DATA, GALLERY_COLLECTION, TESTIMONIALS, HOTEL_I
 export default function Home() {
   const hotelSchema = {
     "@context": "https://schema.org",
-    "@type": "Hotel",
+    "@type": ["Hotel", "LodgingBusiness"],
     name: HOTEL_INFO.name,
-    description: HOTEL_INFO.subtagline,
+    alternateName: ["Draft Hotel Bir", "Draft Hotel", "Draft Cafe Bir", "The Draft Bir", "Draft Stay Bir"],
+    description: "Draft Hotel Bir is a boutique hotel located 3 minutes from Bir's paragliding landing site. Featuring luxury suite rooms, high-speed fiber WiFi, fresh café dining, and Dhauladhar views.",
     url: HOTEL_INFO.siteUrl,
+    logo: `${HOTEL_INFO.siteUrl}/brand.jpg`,
     telephone: HOTEL_INFO.phone,
     email: HOTEL_INFO.email,
     hasMap: HOTEL_INFO.googleMapsUrl,
     address: {
       "@type": "PostalAddress",
-      streetAddress: "At landing Site, Near Bir Paragliding Landing Side, Road, Colony, Suja",
+      streetAddress: "Near Bir Paragliding Landing Site, Colony Road, Suja",
       addressLocality: "Bir",
       addressRegion: "Himachal Pradesh",
       postalCode: "176077",
@@ -31,17 +33,44 @@ export default function Home() {
       latitude: HOTEL_INFO.geo.lat,
       longitude: HOTEL_INFO.geo.lng,
     },
-    priceRange: "₹₹",
-    image: `${HOTEL_INFO.siteUrl}/images/collection/Outdoor%20View%20/20260702_081827.jpg`,
+    priceRange: "₹2499 - ₹5499",
+    currenciesAccepted: "INR",
+    paymentAccepted: "Cash, Credit Card, UPI, Net Banking",
+    checkinTime: "12:00",
+    checkoutTime: "11:00",
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        opens: "00:00",
+        closes: "23:59"
+      }
+    ],
+    sameAs: [
+      HOTEL_INFO.social.instagram,
+      HOTEL_INFO.social.facebook,
+      HOTEL_INFO.googleMapsUrl
+    ],
+    image: [
+      `${HOTEL_INFO.siteUrl}/images/collection/Outdoor%20View%20/20260702_081827.jpg`,
+      `${HOTEL_INFO.siteUrl}/images/collection/Boutique%20room/20260709_163408.jpg`
+    ],
     amenityFeature: [
       { "@type": "LocationFeatureSpecification", name: "Paragliding Landing Ground Access", value: true },
       { "@type": "LocationFeatureSpecification", name: "High-Speed Fiber WiFi", value: true },
       { "@type": "LocationFeatureSpecification", name: "Draft Café & Dining", value: true },
-      { "@type": "LocationFeatureSpecification", name: "Mountain Balconies", value: true }
+      { "@type": "LocationFeatureSpecification", name: "Mountain View Balconies", value: true }
     ],
     starRating: {
       "@type": "Rating",
       ratingValue: "4.9"
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.9",
+      reviewCount: "128",
+      bestRating: "5",
+      worstRating: "1"
     }
   };
 
@@ -78,11 +107,11 @@ export default function Home() {
             </div>
 
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-slate-100 tracking-tight leading-[1.1]">
-              Where Stories Begin <span className="text-amber-400">In Bir Billing.</span>
+              Draft Hotel Bir <span className="text-amber-400">— Where Stories Begin.</span>
             </h1>
 
             <p className="text-base sm:text-xl text-slate-300/90 leading-relaxed font-normal max-w-2xl">
-              A boutique mountain retreat nestled under the Dhauladhar ranges. Experience high-speed workations, cozy suite rooms, artisan coffee at Draft Café, and tandem paragliding at your doorstep.
+              Welcome to <strong>Draft Hotel Bir Billing</strong>, a boutique mountain retreat nestled under the Dhauladhar ranges. Experience high-speed workations, cozy suite rooms, artisan coffee at Draft Café, and tandem paragliding at your doorstep.
             </p>
 
             <div className="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center space-y-3 sm:space-y-0 sm:space-x-4">

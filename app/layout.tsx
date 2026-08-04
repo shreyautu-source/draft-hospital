@@ -18,36 +18,42 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(HOTEL_INFO.siteUrl),
   title: {
-    default: "Draft Hotel Bir Billing - Boutique Stay, Café & Mountain Retreat",
-    template: "%s | Draft Hotel Bir Billing",
+    default: "Draft Hotel Bir | Boutique Stay, Café & Paragliding in Bir Billing",
+    template: "%s | Draft Hotel Bir",
   },
   description:
-    "Boutique hotel stay just 3 minutes from Bir's paragliding landing site. Offering deluxe rooms, family suites, high-speed fiber WiFi, fresh café dining, and stunning Dhauladhar views in Himachal Pradesh.",
+    "Draft Hotel Bir is a top-rated boutique hotel located just 3 minutes from Bir's paragliding landing ground. Offering luxury suite rooms, high-speed fiber WiFi, fresh café dining, and Dhauladhar views in Himachal Pradesh.",
   keywords: [
+    "Draft Hotel Bir",
     "Draft Hotel Bir Billing",
+    "Draft Hotel",
+    "Draft Hotel Bir contact number",
+    "Draft Hotel Bir phone number",
+    "Draft Cafe Bir",
+    "Draft Hotel room booking",
+    "Draft Hotel landing site Bir",
     "Boutique hotel Bir Himachal Pradesh",
     "Bir paragliding hotel near landing site",
     "Best hotels in Bir Billing",
     "Workation stay Bir",
     "Family suite Bir Billing",
-    "Draft Cafe Bir",
     "Bir Billing accommodations",
     "Dhauladhar mountain view stay",
     "High speed WiFi stay Bir",
     "Tandem paragliding booking Bir"
   ],
-  authors: [{ name: "Draft Hotel Bir Billing" }],
-  creator: "Draft Hotel Bir Billing",
-  publisher: "Draft Hotel Bir Billing",
+  authors: [{ name: "Draft Hotel Bir" }],
+  creator: "Draft Hotel Bir",
+  publisher: "Draft Hotel Bir",
   alternates: {
-    canonical: "/",
+    canonical: HOTEL_INFO.siteUrl,
   },
   openGraph: {
-    title: "Draft Hotel Bir Billing - Where Stories Begin",
+    title: "Draft Hotel Bir | Boutique Stay, Café & Paragliding in Bir Billing",
     description:
-      "Boutique stay minutes from Bir paragliding landing ground. Contemporary mountain comfort, high-speed WiFi, artisan café, and Dhauladhar views.",
+      "Draft Hotel Bir: Premier boutique stay 3 minutes from Bir paragliding landing ground. Contemporary mountain comfort, 100+ Mbps WiFi, artisan café, and Dhauladhar views.",
     url: HOTEL_INFO.siteUrl,
-    siteName: "Draft Hotel Bir Billing",
+    siteName: "Draft Hotel Bir",
     images: [
       {
         url: "/images/collection/Outdoor%20View%20/20260702_081827.jpg",
@@ -61,9 +67,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Draft Hotel Bir Billing - Boutique Stay in Bir",
+    title: "Draft Hotel Bir | Boutique Stay & Café in Bir Billing",
     description:
-      "Stay minutes from Bir's paragliding site. Boutique rooms, cafe, and high-speed fiber WiFi.",
+      "Stay 3 mins from Bir's paragliding site at Draft Hotel Bir. Boutique rooms, cafe, and high-speed fiber WiFi.",
     images: ["/images/collection/Outdoor%20View%20/20260702_081827.jpg"],
     creator: "@thedraftbir",
   },

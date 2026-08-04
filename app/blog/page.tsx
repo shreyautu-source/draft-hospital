@@ -1,14 +1,20 @@
 import Image from "next/image";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import { BLOG_POSTS } from "@/lib/data";
+import { BLOG_POSTS, HOTEL_INFO } from "@/lib/data";
 
 export const metadata = {
-  title: "Bir Billing Travel Guides & Blog | Draft Hotel",
+  title: "Bir Billing Travel Guides & Blog | Draft Hotel Bir",
   description:
-    "Read ultimate guides to paragliding in Bir Billing, top cafes, mountain workations, weekend itineraries from Delhi, and local Himachali travel tips.",
+    "Read ultimate guides to paragliding in Bir Billing, top cafes, mountain workations, weekend itineraries from Delhi, and local Himachali travel tips by Draft Hotel Bir.",
+  keywords: [
+    "Draft Hotel Bir blog",
+    "Bir Billing paragliding guide",
+    "Delhi to Bir Billing trip plan",
+    "Workation in Bir Billing"
+  ],
   alternates: {
-    canonical: "/blog",
+    canonical: `${HOTEL_INFO.siteUrl}/blog`,
   },
 };
 
