@@ -1,12 +1,13 @@
 import Image from "next/image";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import { HOTEL_INFO } from "@/lib/data";
 
 export const metadata = {
-  title: "About Draft Hotel Bir Billing | Story & Mountain Hospitality",
+  title: "About Draft Hotel Bir | Mountain Hospitality & Story",
   description:
-    "Learn about Draft Hotel Bir Billing - a boutique hotel created for travelers seeking thoughtful design, peaceful surroundings, and genuine Himachali hospitality minutes from the paragliding landing site.",
+    "Learn about Draft Hotel Bir - a boutique retreat in Bir Billing created for travelers seeking thoughtful design, peaceful surroundings, and genuine Himachali hospitality 3 minutes from the paragliding landing site.",
   alternates: {
-    canonical: "/about",
+    canonical: `${HOTEL_INFO.siteUrl}/about`,
   },
 };
 
@@ -22,10 +23,10 @@ export default function AboutPage() {
             Our Story & Values
           </span>
           <h1 className="text-4xl sm:text-6xl font-extrabold text-slate-100 tracking-tight">
-            Welcome to Draft Hotel
+            About Draft Hotel Bir
           </h1>
           <p className="text-base sm:text-lg text-slate-300/80 leading-relaxed">
-            Where stories begin. A boutique stay designed for travelers who value aesthetic simplicity, genuine hospitality, and unhurried mountain moments.
+            Where stories begin. A boutique stay in Bir Billing designed for travelers who value aesthetic simplicity, genuine hospitality, and unhurried mountain moments.
           </p>
         </div>
 

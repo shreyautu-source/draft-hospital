@@ -22,15 +22,15 @@ export async function generateMetadata({ params }: RoomPageProps) {
   if (!room) return {};
 
   return {
-    title: `${room.name} | Draft Hotel Bir Billing`,
-    description: `${room.shortDescription} Book direct for best rates in Bir Billing. Includes high-speed fiber WiFi, hot showers, and mountain views.`,
+    title: `${room.name} | Draft Hotel Bir`,
+    description: `${room.shortDescription} Book direct with Draft Hotel Bir Billing for best rates, high-speed WiFi, 24/7 hot water, and mountain balconies.`,
     alternates: {
-      canonical: `/rooms/${room.slug}`,
+      canonical: `${HOTEL_INFO.siteUrl}/rooms/${room.slug}`,
     },
     openGraph: {
-      title: `${room.name} - Draft Hotel Bir Billing`,
+      title: `${room.name} - Draft Hotel Bir`,
       description: room.shortDescription,
-      images: [{ url: room.featuredImage }],
+      images: [{ url: `${HOTEL_INFO.siteUrl}${room.featuredImage}` }],
     },
   };
 }

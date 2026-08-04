@@ -23,10 +23,10 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
   if (!post) return {};
 
   return {
-    title: `${post.title} | Draft Hotel Bir Billing Blog`,
+    title: `${post.title} | Draft Hotel Bir`,
     description: post.excerpt,
     alternates: {
-      canonical: `/blog/${post.slug}`,
+      canonical: `${HOTEL_INFO.siteUrl}/blog/${post.slug}`,
     },
     openGraph: {
       title: post.title,
@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
       type: "article",
       publishedTime: post.publishedDate,
       authors: [post.author],
-      images: [{ url: post.image }],
+      images: [{ url: `${HOTEL_INFO.siteUrl}${post.image}` }],
     },
   };
 }
